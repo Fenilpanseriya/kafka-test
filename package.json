@@ -1,0 +1,21 @@
+{
+  "name": "ngrok-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js & lt --port 9092 --subdomain appizap",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "kafkajs": "^2.2.4",
+    "nodemon": "^3.1.7"
+  }
+}
