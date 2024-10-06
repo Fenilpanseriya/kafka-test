@@ -13,9 +13,9 @@ const kafka = new Kafka({
     brokers: [process.env.KAFKA_BROKER],
     ssl: {
       rejectUnauthorized: true, // Ensure certificates are checked
-      ca: [fs.readFileSync('./ca.pem', 'utf-8')], // CA Certificate
-      key: fs.readFileSync('./client-key.pem', 'utf-8'), // Client Key
-      cert: fs.readFileSync('./client-cert.pem', 'utf-8'), // Client Certificate
+      ca: [fs.readFileSync(process.env.KAFKA_SSL_CA_PATH, 'utf-8')],
+      cert: fs.readFileSync(process.env.KAFKA_SSL_CERT_PATH, 'utf-8'),
+      key: fs.readFileSync(process.env.KAFKA_SSL_KEY_PATH, 'utf-8')
     },
   });
 
